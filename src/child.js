@@ -18,7 +18,7 @@ function Child() {
             desc: newDesc
         });
         setDesc('');
-        setAmount();
+        setAmount(0);
     }
     const getIncome=()=>{
         let income=0;
