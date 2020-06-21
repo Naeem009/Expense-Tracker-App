@@ -2,23 +2,24 @@ import React, {useContext, useState} from 'react';
 import {TransactionContext} from './transContext';
 
 function Child() {
-    let {transactions, addTransaction} =useContext(TransactionContext);
+    let { transactions, addTransaction } = useContext(TransactionContext);
     let [newDesc, setDesc] = useState("");
     let [newAmount, setAmount] = useState(0);
 
-    // console.log(transactions); 
-    const handleAddition=(event)=>{
+
+    const handleAddition = (event) => {
         event.preventDefault();
-        if(Number(newAmount)===0){
-            alert("Please enter correct amount");
+        if (Number(newAmount) === 0) {
+            alert("Please enter correct value");
             return false;
         }
         addTransaction({
             amount: Number(newAmount),
             desc: newDesc
         });
+
         setDesc('');
-        setAmount(0);
+        setAmount(0)
     }
     const getIncome=()=>{
         let income=0;
@@ -79,7 +80,7 @@ function Child() {
             </form>
 
         </div>
-    )
+    );
 
 }
 
