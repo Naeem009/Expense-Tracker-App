@@ -76,7 +76,7 @@ function Child() {
                     onChange={(ev)=>setAmount(ev.target.value)} required/>
                 </label>
                 <br/>
-                <input type="button" value="Add Transaction" />
+                <input type="submit" value="Add Transaction" />
             </form>
 
         </div>
