@@ -9,7 +9,7 @@ const initialTransactions = [
 
 export const TransactionContext = createContext(initialTransactions);
 
-export const TransactionProvider = ({Children})=>{
+export const TransactionProvider = ({children})=>{
     let [state, dispatch] = useReducer(TransactionReducer, initialTransactions);
     function addTransaction(transObj){
         dispatch({
@@ -26,7 +26,7 @@ export const TransactionProvider = ({Children})=>{
             transaction: state,
             addTransaction: addTransaction
         }}>
-            {Children}
+            {children}
         </TransactionContext.Provider>
     )
 }
