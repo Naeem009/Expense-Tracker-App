@@ -23,8 +23,8 @@ export const TransactionProvider = ({children})=>{
 
     return(
         <TransactionContext.Provider value={{
-            transaction: state,
-            addTransactions: addTransaction
+            transactions: state,
+            addTransaction: addTransaction
         }}>
             {children}
         </TransactionContext.Provider>
